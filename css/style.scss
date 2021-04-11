@@ -1,0 +1,119 @@
+$desaturatedRed: hsl(0, 36%, 70%);
+$softRed: hsl(0, 93%, 68%);
+$darkGrayishRed: hsl(0, 6%, 24%);
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.modal{
+    width: 100%;
+    height: 100vh;
+
+    .txt{
+        width: 55%;
+        height: 100vh;
+        position: absolute;
+        left: 0px;
+        font-family: 'overpass';
+        background-color: rgb(245, 244, 243);
+    }
+    .txt img{
+        margin: 50px 0px 50px 120px;
+    }
+    .txt h1 span{
+        color: $desaturatedRed;
+    }
+    .txt h1{
+        margin: 50px 0px 0px 120px;
+        font-size: 60px;
+    }
+    .txt p{
+        margin: 10px 0px 0px 120px;
+        color: $desaturatedRed;
+        width: 60%;
+    }
+    .txt form input[type=email]{
+        margin: 20px 0px 0px 120px;
+        padding: 10px;
+        width: 300px;
+        border: 1px solid $softRed;
+        outline: none;
+        border-radius: 20px;
+        height: 24px;
+    }
+    .txt form input[type=email]::placeholder{
+        color: $softRed;
+    }
+    .txt form input[type=submit]{
+        color: white;
+        background-color: $softRed;
+        width: 70px;
+        height: 46px;
+        font-size: 24px;
+        border: none;
+        border-radius: 20px;
+        position: relative;
+        left: -60px;
+        top: 3px;
+        cursor: pointer;
+    }
+    .txt form input[type=submit]:hover{
+        transform: scale(1.1);
+        opacity: .5;
+    }
+
+    .img{
+        width: 45%;
+        height: 100%;
+        position: absolute;
+        right: 0px;
+        background-image: url(../images/hero-desktop.jpg);
+        
+    }
+    .error{
+        position: relative;
+        top: -88px;
+        right: -230px;
+        display: none;
+    }
+}
+
+@media (max-width:375px){
+    .modal{
+        width: 100%;
+        height: 100vh;
+    
+        .txt{
+            width: 100%;
+            height: 100vh;
+        }
+        .txt img{
+            margin: 50px 0px 50px 60px;
+        }
+        .txt h1{
+            margin: 200px 0px 20px 0px;
+            font-size: 35px;
+            text-align: center;
+        }
+        .txt p{
+            margin: 10px 0px 0px 80px;
+            text-align: center;
+        }
+        .txt form input[type=email]{
+            margin: 20px 0px 0px 20px;
+        }
+        .txt form input[type=submit]{
+            position: relative;
+            left: 280px;
+            top: -46px;
+        }
+    
+        .img{
+            width: 100%;
+            height: 30%;
+            margin-top: 110px;
+            background-image: url(../images/hero-mobile.jpg);
+        }
+    }
+}
